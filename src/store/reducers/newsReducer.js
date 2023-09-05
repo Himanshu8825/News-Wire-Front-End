@@ -1,12 +1,10 @@
-export default function newsReducer(oldStor = {}, action) {
+export default function newsReducer(oldStore = {}, action) {
     switch (action.type) {
         case 'fetch_news':
-            return { ...oldStor, allNews: action.payload };
+            return { ...oldStore, allNews : action.payload};
         case 'fetch_news_by_id':
-            return { ...oldStor, newsItem: action.payload };
+            return {...oldStore, newsItem: action.payload};
         default:
-            return oldStor;
+            return oldStore;
     }
-};
-
-
+}
